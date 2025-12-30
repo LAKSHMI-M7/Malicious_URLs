@@ -43,8 +43,8 @@ Malicious URLs/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/malicious-url-detector.git
-cd malicious-url-detector
+git clone https://github.com/LAKSHMI-M7/Malicious_URLs.git
+cd Malicious_URLs
 ```
 
 ### 2. Install Dependencies
@@ -74,8 +74,6 @@ Open your browser and navigate to `http://127.0.0.1:5000`.
     - `1: Defacement`
     - `2: Malware`
     - `3: Phishing`
-
-
 
 ---
 *Disclaimer: This tool is for educational and showcase purposes. While highly accurate, always exercise caution when visiting unknown links.*

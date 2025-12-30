@@ -2,7 +2,7 @@
 
 A modern, professional, and high-performance web application designed to detect malicious URLs using Machine Learning. This tool analyzes links for phishing, malware, and defacement patterns in real-time.
 
-![Aesthetic Dashboard](https://via.placeholder.com/800x400.png?text=Malicious+URL+Detector+Dashboard)
+
 
 ## 🚀 Overview
 

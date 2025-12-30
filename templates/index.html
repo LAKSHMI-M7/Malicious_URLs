@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malicious URL Detector | CyberShield AI</title>
+    <meta name="description"
+        content="Check website safety in seconds using advanced AI and machine learning. Detect phishing, malware, and defacement instantly.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body class="dark-theme">
+    <div class="background-glow"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i data-lucide="shield-check" class="logo-icon"></i>
+                <div class="logo-text">
+                    <h1>Malicious URL Detector</h1>
+                    <span>Check link safety in seconds</span>
+                </div>
+            </div>
+            <div class="nav-links">
+                <button class="nav-tab active" data-tab="checker">URL Checker</button>
+                <button class="nav-tab" data-tab="model">Model Overview</button>
+                <button class="nav-tab" data-tab="about">About Project</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content">
+        <!-- URL Checker Tab -->
+        <section id="checker" class="tab-content active">
+            <div class="hero-card glass">
+                <div class="card-header">
+                    <h2>URL Security Analysis</h2>
+                    <p>Enter any URL to scan for malicious patterns using our Random Forest model.</p>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <i data-lucide="link" class="input-icon"></i>
+                        <input type="text" id="url-input" placeholder="Enter a website URL to analyze..."
+                            autocomplete="off">
+                    </div>
+                    <button id="check-btn" class="primary-btn">
+                        <span class="btn-text">Check URL</span>
+                        <i data-lucide="search" class="btn-icon"></i>
+                        <div class="loader-spinner hidden"></div>
+                    </button>
+                </div>
+                <div id="validation-error" class="error-msg hidden">Please enter a valid URL.</div>
+            </div>
+
+            <!-- Result Section (Hidden by default) -->
+            <div id="result-section" class="result-container hidden">
+                <div id="result-card" class="result-card glass">
+                    <div class="result-icon-wrapper">
+                        <i id="status-icon" data-lucide="shield-check"></i>
+                    </div>
+                    <div class="result-details">
+                        <div class="res-top">
+                            <h3 id="prediction-label">Safe (Benign)</h3>
+                            <span id="risk-badge" class="badge">Low Risk</span>
+                        </div>
+                        <div class="res-stats">
+                            <div class="stat">
+                                <span class="stat-label">Confidence Score</span>
+                                <div class="progress-bar">
+                                    <div id="confidence-fill" class="progress-fill" style="width: 0%"></div>
+                                </div>
+                                <span id="confidence-text" class="stat-value">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card glass">
+                    <i data-lucide="cpu"></i>
+                    <h4>Algorithm</h4>
+                    <p>Random Forest</p>
+                </div>
+                <div class="info-card glass">
+                    <i data-lucide="target"></i>
+                    <h4>Accuracy</h4>
+                    <p>~91%</p>
+                </div>
+                <div class="info-card glass">
+                    <i data-lucide="file-json"></i>
+                    <h4>Feature Method</h4>
+                    <p>TF-IDF Vectorization</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Model Overview Tab -->
+        <section id="model" class="tab-content">
+            <div class="doc-card glass">
+                <h3>Technical Overview</h3>
+                <p>Our detection engine utilizes a Random Forest Classifier trained on over 650,000 URLs. The model
+                    analyzes lexical features and structural patterns to categorize links into four categories:</p>
+                <ul class="analysis-list">
+                    <li><span class="dot benign"></span> <strong
+                            title="Safe, legitimate websites with no malicious intent.">Benign:</strong> Safe,
+                        legitimate websites.</li>
+                    <li><span class="dot defacement"></span> <strong
+                            title="Websites whose content has been maliciously altered, often to display messages or damage reputation.">Defacement:</strong>
+                        Websites whose content has been maliciously altered.</li>
+                    <li><span class="dot phishing"></span> <strong
+                            title="Fraudulent sites designed to steal user credentials, credit card numbers, or other sensitive information.">Phishing:</strong>
+                        Fraudulent sites designed to steal user credentials.</li>
+                    <li><span class="dot malware"></span> <strong
+                            title="Sites used to distribute malicious software, viruses, or exploits to unsuspecting visitors.">Malware:</strong>
+                        Sites hosting malicious software or exploits.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- About Tab -->
+        <section id="about" class="tab-content">
+            <div class="doc-card glass">
+                <h3>About the Project</h3>
+                <p>This application was developed as a cybersecurity showcase to demonstrate the power of Machine
+                    Learning in threat detection. It aims to provide a fast, reliable, and user-friendly interface for
+                    checking link safety.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">Scikit-Learn</span>
+                    <span class="tech-tag">HTML5/CSS3</span>
+                    <span class="tech-tag">Vanilla JS</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 CyberShield AI. Professional ML Security Suite.</p>
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

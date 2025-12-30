@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+debug_output.txt
+files.txt
+test_api.py
+test_api_multi.py
+test_specific.py
+debug_model.py
+train_model.py
+train_model_v2.py
+train_model_v3.py
+# Keeping train_model_v4.py as it is the most current one
+.vscode/
+.idea/
+*.log
